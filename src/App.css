@@ -1,3 +1,4 @@
+/* Initial CSS */
 .App {
   text-align: center;
 }
@@ -25,14 +26,148 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: rgb(100, 225, 250);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg,
+      rgb(250, 225, 150) 0%,
+      rgba(100, 125, 255) 100%);
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-height: 600px;
+  background: rgb(25, 25, 50);
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 48px 0;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 100px;
+}
+
+.todo-input {
+  padding: 16px 32px 16px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid rgb(100, 25, 255);
+  outline: none;
+  width: 300px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+}
+
+.todo-input::placeholder {
+  color: rgb(225, 225, 225);
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(90deg,
+      rgba(75, 25, 250, 1) 0%,
+      rgba(150, 0, 250, 1) 100%);
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid rgb(50, 150, 250);
+}
+
+.todo-button.edit {
+  background: linear-gradient(90deg,
+      rgba(25, 150, 250, 1) 0%,
+      rgba(25, 100, 250, 1) 100%);
+  padding: 16px 24px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg,
+      rgba(250, 150, 50, 1) 0%,
+      rgba(250, 100, 0, 1) 100%);
+  padding: 16px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(90deg,
+      rgba(100, 25, 250, 1) 0%,
+      rgba(150, 0, 250, 1) 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(90deg,
+      rgba(250, 25, 250, 1) 0%,
+      rgba(250, 0, 125, 1) 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(90deg,
+      rgba(50, 150, 250, 1) 0%,
+      rgba(25, 125, 225, 1) 100%);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.edit-icon {
+  color: rgb(255, 255, 255);
 }
