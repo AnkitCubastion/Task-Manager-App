@@ -65,10 +65,10 @@ h1 {
   font-size: 24px;
 }
 
-.complete {
+/* .complete {
   text-decoration: line-through;
   opacity: 0.4;
-}
+} */
 
 .todo-form {
   margin-bottom: 100px;
