@@ -47,12 +47,6 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-/* body {
-  background: linear-gradient(90deg,
-      rgb(250, 225, 150) 0%,
-      rgba(100, 125, 255) 100%);
-} */
-
 .todo-app {
   display: flex;
   flex-direction: column;

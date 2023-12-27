@@ -5,6 +5,7 @@ const TodoContext = createContext();
 export const TodoProvider = ({ children }) => {
 
     const [todos, setTodos] = useState([]);
+
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     const toggleDarkMode = () => {
@@ -48,6 +49,7 @@ export const TodoProvider = ({ children }) => {
             {children}
         </TodoContext.Provider>
     );
+    
 };
 
 export const useTodoContext = () => {
