@@ -3,8 +3,13 @@ import { createContext, useContext, useState } from 'react';
 const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
-    
+
     const [todos, setTodos] = useState([]);
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode((prevMode) => !prevMode);
+    };
 
     const addTodo = todo => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -38,7 +43,7 @@ export const TodoProvider = ({ children }) => {
 
     return (
         <TodoContext.Provider
-            value={{ todos, addTodo, updateTodo, removeTodo, completeTodo }}
+            value={{ todos, addTodo, updateTodo, removeTodo, completeTodo, isDarkMode, toggleDarkMode }}
         >
             {children}
         </TodoContext.Provider>

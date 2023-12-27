@@ -47,11 +47,11 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-body {
+/* body {
   background: linear-gradient(90deg,
       rgb(250, 225, 150) 0%,
       rgba(100, 125, 255) 100%);
-}
+} */
 
 .todo-app {
   display: flex;
@@ -67,7 +67,7 @@ body {
 
 h1 {
   margin: 48px 0;
-  color: rgb(0, 0, 0);
+  color: rgb(100, 75, 250);
   font-size: 24px;
 }
 
@@ -138,24 +138,6 @@ h1 {
   width: 50%;
 }
 
-.todo-row:nth-child(4n + 1) {
-  background: linear-gradient(90deg,
-      rgba(100, 25, 250, 1) 0%,
-      rgba(150, 0, 250, 1) 100%);
-}
-
-.todo-row:nth-child(4n + 2) {
-  background: linear-gradient(90deg,
-      rgba(250, 25, 250, 1) 0%,
-      rgba(250, 0, 125, 1) 100%);
-}
-
-.todo-row:nth-child(4n + 3) {
-  background: linear-gradient(90deg,
-      rgba(50, 150, 250, 1) 0%,
-      rgba(25, 125, 225, 1) 100%);
-}
-
 .icons {
   display: flex;
   align-items: center;
@@ -170,4 +152,37 @@ h1 {
 
 .edit-icon {
   color: rgb(255, 255, 255);
+}
+
+.light-mode {
+  /* Light mode styles */
+  background: linear-gradient(90deg,
+      rgb(250, 225, 150) 0%,
+      rgba(100, 125, 255) 100%);
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.dark-mode {
+  /* Dark mode styles */
+  background: rgb(50, 50, 50);
+  text-align: center;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
 }
